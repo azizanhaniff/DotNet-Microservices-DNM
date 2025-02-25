@@ -1,0 +1,51 @@
+@Services.CouponAPI_HostAddress = http://localhost:5179
+
+GET {{Services.CouponAPI_HostAddress}}/api/couponapi
+Accept: application/json
+
+###
+
+GET {{Services.CouponAPI_HostAddress}}/api/couponapi/1
+Accept: application/json
+
+###
+
+GET {{Services.CouponAPI_HostAddress}}/api/couponapi/3
+Accept: application/json
+
+###
+
+GET {{Services.CouponAPI_HostAddress}}/api/couponapi/getbycode/10OFF
+Accept: application/json
+
+###
+
+POST {{Services.CouponAPI_HostAddress}}/api/couponapi
+Accept: application/json
+Content-Type: application/json
+
+{
+    "couponCode": "AYAM",
+    "discountAmount": 10,
+    "minAmount": 20
+}
+
+###
+
+PUT {{Services.CouponAPI_HostAddress}}/api/couponapi
+Accept: application/json
+Content-Type: application/json
+
+{
+    "couponId": 8,
+    "couponCode": "AYAM UPDATED",
+    "discountAmount": 100,
+    "minAmount": 200
+}
+
+###
+
+DELETE {{Services.CouponAPI_HostAddress}}/api/couponapi/4
+Accept: application/json
+
+###
